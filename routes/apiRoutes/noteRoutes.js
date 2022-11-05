@@ -1,7 +1,9 @@
 const router = require('express').Router();
-
 const { notes } = require('../../db/db.json');
-const createNewNote = require('../../lib/notes');
+const {
+    createNewNote,
+    deleteNote
+    } = require('../../lib/notes');
 
 router.get('/notes', (req, res) => {
     let saved = notes;
@@ -10,10 +12,14 @@ router.get('/notes', (req, res) => {
 
 router.post('/notes', (req, res) => {
     req.body.id = notes.length.toString();
-
-    const note = createNewNote(req.body, notes);
-    
+    let note = createNewNote(req.body, notes);
     res.json(note);
+
+    router.delete('notes/:id', (req, res) => {
+        deleteNote(notes, req.params.id);
+        res.json(notes);
+    })
+    
 })
 
 module.exports = router;
