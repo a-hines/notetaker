@@ -20,3 +20,4 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 Screenshot of deployed app: 
+![Screenshot 2022-11-05 171217](https://user-images.githubusercontent.com/99751726/200141547-02efadc3-edc8-42c0-87ab-da0056430c40.jpg)
