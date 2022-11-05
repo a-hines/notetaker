@@ -1,6 +1,6 @@
 # Note Taker
 
-## Deployed App: 
+## Deployed App: https://hines-notetaker.herokuapp.com/
 
 
 ### The acceptance critria for this project were as follows: 
